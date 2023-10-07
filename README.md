@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio Coding Solutions
 
-## Getting Started
+## Features
 
-First, run the development server:
+- CRUD completo de Clientes e Produtos
+- Criação de relacionamento de clientes e produtos através de "Compras"
+- Saldo do cliente
+- Quantidade de itens comprados
+- "Login" simplificado no ambiente frontend
+- Carregar o saldo do cliente
+- Relatório de vendas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Pontos Positivos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Backend sólido e bem estruturado
+- Domain Driven Design
+- Repository Pattern
+- Migrations
+- Frontend mapeia todas as funcionalidades do backend
+- Utilização do react-bootstrap
+- Validações de negócio (saldo para compra, CPF válido e único)
+- Um breve overview está disponível no github através dos commits
+- Ambiente completo publicado em serviços de hospedagem gratuita (Azure Students Subscription e Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pontos de Melhora
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Frontend simples
+- Melhor tratativa de erros pelo frontend
+- Utilização do redux poderia estar melhor
+- Falta de testes
 
-## Learn More
+## Se eu tivesse mais tempo
 
-To learn more about Next.js, take a look at the following resources:
+- Trabalharia melhor com o redux
+- Melhoraria o visual do aplicativo
+- Desenvolveria os testes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dificuldades Encontradas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Tive algumas dificuldades iniciais com a configuração do CORS pela utilização de FastEndpoints
+- Após resolver o CORS percebi que o mapeamento do Id nos Endpoints de Update estavam incorretos, mas foram resolvidos
+- Primeira vez que crio um projeto complexo com ````create-next-app````, anteriormente utilizava ```create-react-app```, mas foi preterido pela equipe do react
 
-## Deploy on Vercel
+## Sugestões
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Não consegui identificar claramente se o "Cliente" seria um vendedor, que cada produto estaria atribuído exclusivamente a um vendedor, ou um cliente, que foi o caminho que segui.
+- Entrega por repositório do github.
+- Definição do desafio em repositório ou documento, copiei e criei um documento com a descrição do desafio para ter acesso durante o desenvolvimento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Agradecimentos
+
+Agradeço desde já a possibilidade de participar desse processo seletivo, o desenvolvimento desse teste me desafiou e me fez crescer ainda mais como desenvolvedor.
