@@ -6,6 +6,7 @@ import { getProduto, updateProduto } from '@/app/data/services/apiProduto'
 import { store } from '@/app/features/redux/store'
 import { UUID } from 'crypto'
 import React, { useEffect, useState } from 'react'
+import { Container } from 'react-bootstrap'
 import { Provider } from 'react-redux'
 
 export default function EditarProduto({params} : {params: {id: UUID}}) {
@@ -23,7 +24,8 @@ export default function EditarProduto({params} : {params: {id: UUID}}) {
   return (
     <Provider store={store}>
         <Header/>
-        {produto.id && <FormProduto produto={produto} handler={updateHandler} method="Editar"/>}
+        <Container className="d-flex flex-column align-items-center">
+        {produto.id && <FormProduto produto={produto} handler={updateHandler} method="Edit"/>}
+        </Container>
     </Provider>
-)
-}
+)}

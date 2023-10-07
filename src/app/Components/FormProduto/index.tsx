@@ -14,7 +14,7 @@ export default function FormProduto(props: {method: string, handler: any, produt
       preco: preco,
     };
     props.handler(produto).then(() => {
-      alert("Produto cadastrado com sucesso!");      
+      alert(`Produto ${props.method.toLowerCase()}ado com sucesso!`);      
       window.location.href = "/produtos";
     }).catch((error: any)=> {
       console.log(error);
@@ -22,7 +22,7 @@ export default function FormProduto(props: {method: string, handler: any, produt
     })
   };
   useEffect(() => {
-    if(props.method === "Editar")
+    if(props.method === "Edit")
     {
       setNome(props.produto?.nome ?? "");
       setDescricao(props.produto?.descricao ?? "");
@@ -48,7 +48,7 @@ export default function FormProduto(props: {method: string, handler: any, produt
             value={descricao}
             onChange={(x) => setDescricao(x.target.value)}
           />
-          <Form.Label>CPF</Form.Label>
+          <Form.Label>Valor</Form.Label>
           <Form.Control
             type="number"
             placeholder="R$ 00.00"
@@ -60,7 +60,7 @@ export default function FormProduto(props: {method: string, handler: any, produt
           <Form.Control
             className="w-50"
             type="button"
-            value={props.method}
+            value={`${props.method}ar`}
             onClick={(x) => handleClick()}
           />
         </Form.Group>

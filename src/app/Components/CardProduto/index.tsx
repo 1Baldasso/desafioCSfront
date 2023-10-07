@@ -11,7 +11,7 @@ export default function CardProduto(props: {
   const user = useSelector((state: RootState) => state.login.value);
   return (
     <>
-      <Card key={props.produto.id} className="w-25">
+      <Card key={props.produto.id} className="w-50">
         <Card.Header>
           <Card.Title>{props.produto.nome}</Card.Title>
         </Card.Header>
@@ -28,6 +28,11 @@ export default function CardProduto(props: {
           >
             Comprar
           </Card.Link>
+          <Card.Link
+            href={`/produtos/${props.produto.id}?userId=${user.id}`}
+            >
+            Detalhes
+            </Card.Link>
         </Card.Footer>
       </Card>
     </>

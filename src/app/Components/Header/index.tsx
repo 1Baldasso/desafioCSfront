@@ -25,8 +25,7 @@ export default function Header() {
     }
   }, [userId])
   return (
-    <>
-      <Navbar expand="sm" className="bg-secondary mb-3" fixed="top">
+      <Navbar expand="sm" className="bg-secondary mb-3">
         <Container>
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse id="navbar" className="d-flex flex-row gap-5">
@@ -60,6 +59,5 @@ export default function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
   );
 }

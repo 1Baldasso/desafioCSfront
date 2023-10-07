@@ -13,7 +13,7 @@ export default function NovoProduto() {
       <Header />
       <Container className="d-flex flex-column align-items-center">
         <h1>Novo Produto</h1>
-        <FormProduto handler={createProduto} method="Cadastrar" />
+        <FormProduto handler={createProduto} method="Cadastr" />
       </Container>
     </Provider>
   );
