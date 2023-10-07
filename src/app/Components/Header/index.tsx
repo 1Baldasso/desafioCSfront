@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import { login } from "@/app/features/redux/login/reducer";
 import { getCliente } from "@/app/data/services/apiCliente";
+import { UUID } from "crypto";
 
 export default function Header() {
   const searchParams = useSearchParams();
